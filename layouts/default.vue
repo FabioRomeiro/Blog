@@ -25,7 +25,7 @@
 }
 
 .layout-default__content {
-  padding: 64px 0 0 300px;
+  padding: 64px 0 64px 300px;
   margin: 0 auto;
   width: 60%;
   max-width: 1000px;

@@ -1,5 +1,5 @@
 <template>
-  <section class="credentials">
+  <section v-once class="credentials">
     <p class="credentials__title">
       <span class="credentials__name">
         Fábio Romeiro

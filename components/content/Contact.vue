@@ -1,5 +1,5 @@
 <template>
-  <ul class="contact">
+  <ul class="contact" v-once>
     <li>
       <NuxtLink to="mailto:hi@fabioromeiro.dev" external title="E-mail">
         hi@fabioromeiro.dev

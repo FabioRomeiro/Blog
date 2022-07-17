@@ -14,5 +14,10 @@ export default defineNuxtConfig({
   ],
   colorMode: {
     preference: 'dark'
+  },
+  nitro: {
+    prerender: {
+      routes: ['/sitemap.xml']
+    }
   }
 })
