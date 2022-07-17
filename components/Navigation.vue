@@ -19,24 +19,29 @@
   </ContentNavigation>
 </template>
 
-<style>
-.navigation__list {
-  display: flex;
-  flex-direction: column;
-  padding: 8px 16px;
-}
+<style lang="scss">
+.navigation {
+  &__list {
+    display: flex;
+    flex-direction: column;
+    padding: 8px 16px;
+  }
+  
+  &__link {
+    text-decoration: none;
+    display: block;
+    padding: 8px;
+    color: var(--contrast-color);
 
-.navigation__link {
-  text-decoration: none;
-  display: block;
-  padding: 8px;
-  color: #2e2e2e;
-}
-.navigation__link:not(.navigation__link--active):hover {
-  background-color: #f3f3f3;
-}
-.navigation__link--active {
-  background-color: #2e2e2e;
-  color: white;
+    &:not(&--active):hover {
+      background-color: var(--secondary-color);
+    }
+
+    &--active {
+      background-color: var(--highlight-color);
+      color: var(--primary-color);
+      font-weight: 500;
+    }
+  }
 }
 </style>

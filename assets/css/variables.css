@@ -1,0 +1,16 @@
+:root {
+  --primary-color: #2e2e2e;
+  --secondary-color: #3a3a3a;
+  --contrast-color: #fbfbfb;
+  --bg-color: #202020;
+  --highlight-color: #00ffc6;
+  --font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+.light-mode {
+  --primary-color: #fbfbfb;
+  --contrast-color: #2e2e2e;
+  --secondary-color: #f3f3f3;
+  --bg-color: #fbfbfb;
+  --highlight-color: #00584e;
+}
