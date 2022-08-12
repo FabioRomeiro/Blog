@@ -1,6 +1,7 @@
 body {
-  font-family: Poppins, sans-serif;
+  font-family: var(--font-family);
   font-size: 14px;
   font-weight: 400;
-  color: #2e2e2e;
+  color: var(--contrast-color);
+  background-color: var(--bg-color);
 }

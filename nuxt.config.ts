@@ -9,9 +9,15 @@ export default defineNuxtConfig({
   css: [
     '@/assets/css/reset.css',
     '@/assets/css/fonts.css',
+    '@/assets/css/variables.css',
     '@/assets/css/global.css'
   ],
   colorMode: {
-    fallback: 'dark'
+    preference: 'dark'
+  },
+  nitro: {
+    prerender: {
+      routes: ['/sitemap.xml']
+    }
   }
 })
