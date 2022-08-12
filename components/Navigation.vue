@@ -11,6 +11,10 @@
             class="navigation__link"
             active-class="navigation__link--active"
           >
+            <FontAwesomeIcon
+              :icon="link.icon"
+              class="icon"
+            />
             {{ link.title }}
           </NuxtLink>
         </li>
@@ -41,6 +45,10 @@
       background-color: var(--highlight-color);
       color: var(--primary-color);
       font-weight: 500;
+    }
+
+    .icon {
+      margin-right: 8px;
     }
   }
 }

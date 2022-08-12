@@ -5,3 +5,10 @@ body {
   color: var(--contrast-color);
   background-color: var(--bg-color);
 }
+
+svg {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.125em;
+  display: inline-block;
+}

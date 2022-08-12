@@ -30,6 +30,13 @@
     font-weight: 500;
   }
 
+  h1, h2, h3, h4, h5 {
+    svg {
+      font-size: 32px;
+      margin-right: 16px;
+    }
+  }
+
   p {
     margin-bottom: 16px;
     line-height: 1.8em;
