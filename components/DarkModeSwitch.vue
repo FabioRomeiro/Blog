@@ -5,26 +5,41 @@
       class="dark-mode-switch__input"
       type="checkbox"
       v-model="isLightMode"
-      @change="switchColorMode"
     />
     <label
       class="dark-mode-switch__switch"
       for="dark-mode-switch"
-    ></label>
+    >
+      <FontAwesomeIcon
+        icon="moon"
+        class="icon"
+      />
+      <FontAwesomeIcon
+        icon="sun"
+        class="icon"
+      />
+    </label>
   </div>
 </template>
 
-<script setup>
-const colorMode = useColorMode()
-const isLightMode = colorMode.preference === 'light'
-const switchColorMode = event => {
-  colorMode.preference = event.target.checked ? 'light' : 'dark'
+<script>
+export default {
+  computed: {
+    isLightMode: {
+      get () {
+        return this.$colorMode.preference === 'light'
+      },
+      set (value) {
+        this.$colorMode.preference = value ? 'light' : 'dark'
+      }
+    }
+  }
 }
 </script>
 
 <style lang="scss" scoped>
 .dark-mode-switch {
-  $slider-size: 30px;
+  $slider-size: 40px;
   $slider-spacing: 2px;
   $transition-duration: .2s;
 
@@ -32,8 +47,8 @@ const switchColorMode = event => {
 
   &__switch {
     display: inline-block;
-    width: 60px;
-    height: 34px;
+    width: 80px;
+    height: 44px;
     position: relative;
     cursor: pointer;
     background-color: var(--primary-color);
@@ -50,15 +65,35 @@ const switchColorMode = event => {
       top: $slider-spacing;
       transition: left $transition-duration ease-in-out, background-color $transition-duration ease-in-out;
     }
-  }
 
-  &__input:checked + &__switch::after {
-    left: calc(100% - #{$slider-size} - #{$slider-spacing});
-    background-color: var(--primary-color);
+    .icon {
+      $icon-size: 24px;
+
+      position: absolute;
+      font-size: $icon-size;
+      top: calc(50% - #{$icon-size} / 2);
+      transition: color .2s ease-in-out;
+      z-index: 1;
+
+      &:first-child {
+        color: var(--primary-color);
+        left: 9px;
+      }
+
+      &:last-child {
+        color: var(--highlight-color);
+        right: 9px;
+      }
+    }
   }
 
   &__input:checked + &__switch {
     background-color: var(--highlight-color);
+
+    &::after {
+      left: calc(100% - #{$slider-size} - #{$slider-spacing});
+      background-color: var(--primary-color);
+    }
   }
 
   :not(&__input:checked) + &__switch::after {

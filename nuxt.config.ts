@@ -2,6 +2,11 @@ import { defineNuxtConfig } from 'nuxt'
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
+  content: {
+    navigation: {
+      fields: ['icon']
+    }
+  },
   modules: [
     '@nuxt/content',
     '@nuxtjs/color-mode'
@@ -18,6 +23,11 @@ export default defineNuxtConfig({
   nitro: {
     prerender: {
       routes: ['/sitemap.xml']
+    }
+  },
+  hooks: {
+    'build:before': () => {
+      import('./plugins/fontAwesome/sprite')
     }
   }
 })
