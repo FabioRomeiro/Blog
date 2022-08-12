@@ -3,6 +3,7 @@
     <aside class="layout-default__header">
       <Credentials />
       <Navigation />
+      <DarkModeSwitch class="layout-default__switch" />
     </aside>
     <section class="layout-default__content">
       <slot></slot>
@@ -29,5 +30,10 @@
   margin: 0 auto;
   width: 60%;
   max-width: 1000px;
+}
+
+.layout-default__switch {
+  margin-top: auto;
+  align-self: center;
 }
 </style>
