@@ -21,7 +21,6 @@ const tagSlug = $slugify(props.tag)
 .tag {
   padding: 8px 16px;
   font-weight: 500;
-  display: inline-block;
   border-radius: 30px;
   background-color: var(--contrast-color);
   color: var(--primary-color);

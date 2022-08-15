@@ -29,6 +29,7 @@
     display: flex;
     flex-direction: column;
     padding: 8px 16px;
+    font-size: 16px;
   }
   
   &__link {

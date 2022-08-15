@@ -1,17 +1,18 @@
 <template>
-  <section v-once class="last-posts">
-    <ol class="last-posts__list">
+  <section v-once class="posts">
+    <ol class="posts__list">
       <li
         v-for="post in posts"
         :key="post.title"
-        class="last-posts__post"
+        class="posts__post"
       >
         <PostItem :post="post" />
       </li>
     </ol>
     <NuxtLink
+      v-if="limit"
       to="/posts"
-      class="last-posts__link"
+      class="posts__link"
     >
       <span>Ver todos os artigos</span>
       <Chevron />
@@ -20,16 +21,20 @@
 </template>
 
 <script setup lang="ts">
-const posts = await queryContent('posts')
+const { limit } = defineProps({
+  limit: Number
+})
+
+let posts = await queryContent('posts')
   .only(['title', 'description', 'publicationDate', 'tags', '_path'])
   .where({ _path: { $ne: '/posts' } })
   .sort({ publicationDate: 1 })
-  .limit(5)
+  .limit(limit)
   .find()
 </script>
 
 <style lang="scss">
-.last-posts {
+.posts {
   display: flex;
   flex-direction: column;
   gap: 32px;

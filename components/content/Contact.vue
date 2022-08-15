@@ -1,32 +1,61 @@
 <template>
-  <ul class="contact" v-once>
+  <ul
+    class="contact"
+    v-once
+  >
     <li>
-      <NuxtLink to="mailto:hi@fabioromeiro.dev" external title="E-mail">
+      <NuxtLink
+        to="mailto:hi@fabioromeiro.dev"
+        external
+        title="E-mail"
+      >
+        <FontAwesomeIcon icon="envelope" />
         hi@fabioromeiro.dev
       </NuxtLink>
     </li>
     <li>
-      <NuxtLink to="https://www.linkedin.com/in/fabioromeiro" external target="_blank" title="LinkedIn">
+      <NuxtLink
+        to="https://www.linkedin.com/in/fabioromeiro"
+        external
+        target="_blank"
+        title="LinkedIn"
+      >
+        <FontAwesomeIcon icon="linkedin" />
         Fábio Romeiro
       </NuxtLink>
     </li>
     <li>
-      <NuxtLink to="https://github.com/FabioRomeiro" external target="_blank" title="Github">
+      <NuxtLink
+        to="https://github.com/FabioRomeiro"
+        external
+        target="_blank"
+        title="Github"
+      >
+        <FontAwesomeIcon icon="github" />
         FabioRomeiro
       </NuxtLink>
     </li>
     <li>
-      <NuxtLink to="https://www.instagram.com/fabioromeiroo" external target="_blank" title="Instagram">
+      <NuxtLink
+        to="https://www.instagram.com/fabioromeiroo"
+        external
+        target="_blank"
+        title="Instagram"
+      >
+        <FontAwesomeIcon icon="instagram" />
         @fabioromeiroo
       </NuxtLink>
     </li>
   </ul>
 </template>
 
-<style>
+<style lang="scss" scoped>
 .contact {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
+  columns: 2;
+  line-height: 30px;
+
+  svg {
+    margin-right: 8px;
+  }
 }
 </style>
