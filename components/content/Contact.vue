@@ -51,8 +51,11 @@
 
 <style lang="scss" scoped>
 .contact {
-  columns: 2;
   line-height: 30px;
+
+  @media (min-width: 850px) {
+    columns: 2;
+  }
 
   svg {
     margin-right: 8px;

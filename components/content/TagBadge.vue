@@ -9,12 +9,12 @@
 </template>
 
 <script setup lang="ts">
-const props = defineProps({
+const { tag } = defineProps({
   tag: String
 })
 
 const { $slugify } = useNuxtApp()
-const tagSlug = $slugify(props.tag)
+const tagSlug = $slugify(tag)
 </script>
 
 <style lang="scss" scoped>
@@ -24,6 +24,8 @@ const tagSlug = $slugify(props.tag)
   border-radius: 30px;
   background-color: var(--contrast-color);
   color: var(--primary-color);
+  white-space: nowrap;
+  display: inline-block;
 
   &--front-end {
     background-color: #ffd300;

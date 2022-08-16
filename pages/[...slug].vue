@@ -8,11 +8,19 @@
 .content-doc {
   font-size: 18px;
 
+  @media (max-width: 849px) {   
+    font-size: 16px;
+  }
+
   h1 {
     font-size: 2.5em;
     font-weight: 500;
     margin-bottom: 24px;
     position: relative;
+
+    @media (max-width: 849px) {   
+      font-size: 2em;
+    }
   }
 
   h2 {
@@ -23,11 +31,19 @@
     a {
       color: var(--contrast-color);
     }
+
+    @media (max-width: 849px) {   
+      font-size: 1.5em;
+    }
   }
 
   h3 {
     font-size: 1.5em;
     font-weight: 500;
+
+    @media (max-width: 849px) {   
+      font-size: 1.2em;
+    }
   }
 
   h1, h2, h3, h4, h5 {

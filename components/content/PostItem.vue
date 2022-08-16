@@ -44,8 +44,16 @@ function formatDate(dateStr: string): string {
   &__title {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     margin-bottom: 16px;
+
+    @media (min-width: 850px) {
+      align-items: center;
+    }
+
+    @media (max-width: 849px) {
+      gap: 8px;
+      flex-direction: column;
+    }
   }
 
   &__date {
@@ -56,7 +64,8 @@ function formatDate(dateStr: string): string {
   &__tags {
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 8px;
+    flex-wrap: wrap;
   }
 }
 </style>
