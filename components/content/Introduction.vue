@@ -83,14 +83,16 @@
       position: relative;
 
       &:not(:last-child)::after {
+        $bullet-size: 5px;
+
         content: '';
-        width: 5px;
-        height: 5px;
-        border-radius: 5px;
+        width: $bullet-size;
+        height: $bullet-size;
+        border-radius: $bullet-size;
         background-color: var(--contrast-color);
         position: absolute;
         right: -16px;
-        top: calc(100% - 10px);
+        top: calc(50% - #{$bullet-size}/2);
       }
     }
   }
