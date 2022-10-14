@@ -8,9 +8,10 @@
         to="mailto:hi@fabioromeiro.dev"
         external
         title="E-mail"
+        class="contact__link"
       >
         <FontAwesomeIcon icon="envelope" />
-        hi@fabioromeiro.dev
+        <span class="label">hi@fabioromeiro.dev</span>
       </NuxtLink>
     </li>
     <li>
@@ -19,9 +20,10 @@
         external
         target="_blank"
         title="LinkedIn"
+        class="contact__link"
       >
         <FontAwesomeIcon icon="linkedin" />
-        Fábio Romeiro
+        <span class="label">Fábio Romeiro</span>
       </NuxtLink>
     </li>
     <li>
@@ -30,9 +32,10 @@
         external
         target="_blank"
         title="Github"
+        class="contact__link"
       >
         <FontAwesomeIcon icon="github" />
-        FabioRomeiro
+        <span class="label">FabioRomeiro</span>
       </NuxtLink>
     </li>
     <li>
@@ -41,9 +44,10 @@
         external
         target="_blank"
         title="Instagram"
+        class="contact__link"
       >
         <FontAwesomeIcon icon="instagram" />
-        @fabioromeiroo
+        <span class="label">@fabioromeiroo</span>
       </NuxtLink>
     </li>
   </ul>
@@ -52,13 +56,27 @@
 <style lang="scss" scoped>
 .contact {
   line-height: 30px;
-
-  @media (min-width: 850px) {
+  
+  @media (min-width: 931px) {
+    font-size: .9em;
     columns: 2;
   }
 
-  svg {
-    margin-right: 8px;
+  @media (max-width: 930px) {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 1.3em;
+  }
+
+  &__link {
+    .label {
+      margin-left: 8px;
+
+      @media (max-width: 930px) {
+        display: none;
+      }
+    }
   }
 }
 </style>
