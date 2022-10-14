@@ -12,10 +12,9 @@
             class="navigation__link"
             active-class="navigation__link--active"
           >
-            <FontAwesomeIcon
-              :icon="link.icon"
-              class="icon"
-            />
+            <span class="icon">
+              {{ link.icon }}
+            </span>
             {{ link.title }}
           </NuxtLink>
         </li>

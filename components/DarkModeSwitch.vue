@@ -39,7 +39,7 @@ export default {
 
 <style lang="scss" scoped>
 .dark-mode-switch {
-  $slider-size: 40px;
+  $slider-size: 28px;
   $slider-spacing: 2px;
   $transition-duration: .2s;
 
@@ -47,8 +47,8 @@ export default {
 
   &__switch {
     display: inline-block;
-    width: 80px;
-    height: 44px;
+    width: 60px;
+    height: 32px;
     position: relative;
     cursor: pointer;
     background-color: var(--primary-color);
@@ -67,7 +67,7 @@ export default {
     }
 
     .icon {
-      $icon-size: 24px;
+      $icon-size: 16px;
 
       position: absolute;
       font-size: $icon-size;
