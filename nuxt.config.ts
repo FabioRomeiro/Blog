@@ -5,6 +5,9 @@ export default defineNuxtConfig({
   content: {
     navigation: {
       fields: ['icon']
+    },
+    highlight: {
+      theme: 'github-dark'
     }
   },
   modules: [

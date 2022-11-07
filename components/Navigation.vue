@@ -1,25 +1,39 @@
+<script setup>
+const pages = [
+  {
+    path: '/',
+    icon: '🏠',
+    title: 'Início'
+  },
+  {
+    path: '/posts',
+    icon: '📰',
+    title: 'Artigos'
+  }
+]
+</script>
+
+
 <template>
   <nav class="navigation">
-    <ContentNavigation v-slot="{ navigation }">
-      <ul class="navigation__list">
-        <li
-          v-for="link of navigation"
-          :key="link._path"
-          class="navigation__item"
+    <ul class="navigation__list">
+      <li
+        v-for="page of pages"
+        :key="page.path"
+        class="navigation__item"
+      >
+        <NuxtLink
+          :to="page.path"
+          class="navigation__link"
+          active-class="navigation__link--active"
         >
-          <NuxtLink
-            :to="link._path"
-            class="navigation__link"
-            active-class="navigation__link--active"
-          >
-            <span class="icon">
-              {{ link.icon }}
-            </span>
-            {{ link.title }}
-          </NuxtLink>
-        </li>
-      </ul>
-    </ContentNavigation>
+          <span class="icon">
+            {{ page.icon }}
+          </span>
+          {{ page.title }}
+        </NuxtLink>
+      </li>
+    </ul>
   </nav>
 </template>
 
