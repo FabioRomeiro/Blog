@@ -25,12 +25,14 @@ const { limit } = defineProps({
   limit: Number
 })
 
-let posts = await queryContent('posts')
+const { data: posts } = useAsyncData(() => {
+  return queryContent('/posts')
   .only(['title', 'description', 'publicationDate', 'tags', '_path'])
   .where({ _path: { $ne: '/posts' } })
   .sort({ publicationDate: 1 })
   .limit(limit)
   .find()
+})
 </script>
 
 <style lang="scss">

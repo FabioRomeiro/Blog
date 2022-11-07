@@ -12,10 +12,7 @@ export default defineNuxtConfig({
     '@nuxtjs/color-mode'
   ],
   css: [
-    '@/assets/css/reset.css',
-    '@/assets/css/fonts.css',
-    '@/assets/css/variables.css',
-    '@/assets/css/global.css'
+    '@/assets/css/style.scss'
   ],
   colorMode: {
     preference: 'dark'
