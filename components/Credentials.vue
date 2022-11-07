@@ -1,13 +1,13 @@
 <template>
   <section v-once class="credentials">
-    <p class="credentials__title">
+    <NuxtLink to="/" class="credentials__title">
       <span class="credentials__name">
         Fábio Romeiro
       </span>
       <span class="credentials__position">
         Desenvolvedor Front-end
       </span>
-    </p>
+    </NuxtLink>
   </section>
 </template>
 
@@ -21,7 +21,7 @@
   }
   
   &__name {
-    font-size: 1.7em;
+    font-size: 1.3em;
     font-weight: 600;
     position: relative;
     color: var(--highlight-color);
@@ -41,13 +41,9 @@
   
   &__position {
     margin-top: 8px;
-    font-size: 1.2em;
+    font-size: 0.9em;
     font-weight: 300;
-  }
-  
-  &__summary {
-    margin-top: 16px;
-    line-height: 1.4em;
+    color: var(--contrast-color);
   }
 }
 </style>
