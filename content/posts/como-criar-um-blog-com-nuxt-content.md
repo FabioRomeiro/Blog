@@ -24,18 +24,54 @@ que achar melhor! Se quiser ver o quão simples é começar a escrever com essa 
 
 ## Começando o projetinho 🏗️
 
-O site que vamos construir é esse aqui: [Demo blog](). Vamos um pouco além do vídeo referenciado na seção anterior, vamos estruturar melhor o projeto pensando em escalabilidade e manutenção.
+O blog que vamos construir é esse aqui: [Demo blog](https://demo-blog.fabioromeiro.dev). Vamos um pouco além do vídeo referenciado na seção anterior, vamos estruturar melhor o projeto pensando em escalabilidade e manutenção.
 
-Se você só está aqui para ver o código final, tudo bem, tá aqui [Código fonte]().
+Se você só está aqui para ver o código final, tudo bem, tá aqui [Código fonte](https://github.com/fabioromeiro/demo-blog).
 
 > A vida é curta demais pra ler textos 🙃
 
 Mas se quiser ver o passo a passo de como foi construído, só seguir lendo!
 
-### Pré-requisitos
-
-Para este projeto seria ideal que tivesse um **conhecimento básico de Vue**.
-
-### Versionamento
+### Versões usadas
+- Node: v16.15.0
+- Npm: v8.5.5
 - Nuxt: v3.0.0
 - Nuxt Content: v2.0.1
+
+### 1) Inicializa projeto com Nuxt Content
+
+Primeiro passo, vamos criar um projeto Nuxt. No terminal entre na pasta que deseja adicionar o projeto e rode
+
+```bash
+npx nuxi init demo-blog -t content
+```
+
+(Troque *demo-blog* pelo nome do seu projeto)
+
+Em seguida entre no diretório criado
+
+```bash
+cd demo-blog
+```
+
+Instale as dependencias
+
+```bash
+npm install
+```
+
+Em seguida abra a pasta na sua IDE. Para quem usa VSCode digite o comando:
+
+```bash
+code .
+```
+
+### 2) Entendendo a estrutura do projeto
+
+Então, o seu blog já está funcionando, é possível escrever conteúdos e navegar pelas páginas, porém ainda não tem sua cara.
+
+Para customiza-lo, vamos entender como está estruturado.
+
+
+
+
