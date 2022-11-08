@@ -1,22 +1,43 @@
 <template>
   <span
     v-once
-    :class="`chevron--${direction.toLowerCase()}`"
+    :class="`chevron--${direction}`"
     :style="{ width: size, height: size }"
     class="chevron"
   ></span>
 </template>
 
-<script setup lang="ts">
+<script setup>
 const props = defineProps({
-  direction: {
-    type: String,
-    default: 'Right'
+  right: {
+    type: Boolean,
+    default: false
+  },
+  left: {
+    type: Boolean,
+    default: false
+  },
+  up: {
+    type: Boolean,
+    default: false
+  },
+  down: {
+    type: Boolean,
+    default: false
   },
   size: {
     type: String,
     default: '0.5em'
   }
+})
+
+const direction = computed(() => {
+  return [
+    { name: 'right', selected: props.right },
+    { name: 'left', selected: props.left },
+    { name: 'up', selected: props.up },
+    { name: 'down', selected: props.down },
+  ].find(({ selected }) => selected)?.name || 'right'
 })
 </script>
 

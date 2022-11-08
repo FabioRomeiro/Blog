@@ -10,7 +10,7 @@
       </li>
     </ol>
     <NuxtLink
-      v-if="limit && posts.length >= limit"
+      v-if="limit && posts && posts.length >= limit"
       to="/posts"
       class="posts__link"
     >
