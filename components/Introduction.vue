@@ -78,9 +78,11 @@
     align-items: center;
     gap: 24px;
     font-style: italic;
+    margin-left: 0;
 
     li {
       position: relative;
+      list-style: none;
 
       &:not(:last-child)::after {
         $bullet-size: 5px;
