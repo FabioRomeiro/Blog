@@ -7,20 +7,16 @@
         </NuxtLink>
       </h3>
       <span class="post__date">
-        {{ formatDate(post.publicationDate) }}
+        {{ post.publicationDate }}
       </span>
     </div>
 
     <p>{{ post.description }}</p>
 
-    <ul class="post__tags">
-      <li
-        v-for="tag in post.tags"
-        :key="tag"
-      >
-        <TagBadge :tag="tag" />
-      </li>
-    </ul>
+    <TagsList
+      class="post__tags"
+      :tags="post.tags"
+    />
   </div>
 </template>
 
@@ -28,19 +24,17 @@
 defineProps({
   post: Object
 })
-
-function formatDate(dateStr: string): string {
-  const date = new Date(dateStr)
-  const month = (date.getMonth() + 1).toLocaleString('en-US', {
-    minimumIntegerDigits: 2,
-    useGrouping: false
-  })
-  return `${date.getDate()}/${month}/${date.getFullYear()}`
-}
 </script>
 
 <style lang="scss">
 .post {
+  background-color: var(--secondary-color);
+  padding: 16px;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 0 1px var(--contrast-color-light);
+
   &__title {
     display: flex;
     justify-content: space-between;
@@ -54,6 +48,14 @@ function formatDate(dateStr: string): string {
       gap: 8px;
       flex-direction: column;
     }
+
+    h3 {
+      margin: 0;
+
+      a {
+        color: var(--highlight-color);
+      }
+    }
   }
 
   &__date {
@@ -62,10 +64,7 @@ function formatDate(dateStr: string): string {
   }
 
   &__tags {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    flex-wrap: wrap;
+    align-self: flex-end;
   }
 }
 </style>

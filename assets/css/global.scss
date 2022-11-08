@@ -28,23 +28,20 @@ body {
   }
   
   h2 {
-    font-size: 2em;
+    font-size: 1.7em;
     font-weight: 500;
     margin: 40px 0 16px 0;
-  
-    a {
-      color: var(--contrast-color);
-    }
-  
+
     @media (max-width: 849px) {   
       font-size: 1.5em;
     }
   }
   
   h3 {
-    font-size: 1.5em;
+    font-size: 1.4em;
     font-weight: 500;
-  
+    margin: 32px 0 16px 0;
+
     @media (max-width: 849px) {   
       font-size: 1.2em;
     }
@@ -54,6 +51,10 @@ body {
     svg {
       font-size: 32px;
       margin-right: 16px;
+    }
+
+    a {
+      color: var(--contrast-color);
     }
   }
   
@@ -71,5 +72,28 @@ body {
     border-left: solid 4px var(--contrast-color);
     padding-left: 16px;
     font-style: italic;
-  }  
+  }
+
+  strong {
+    font-weight: 500;
+  }
+
+  ul {
+    margin-left: 24px;
+
+    li {
+      list-style: disc;
+      line-height: 1.5em;
+    }
+  }
+
+  pre {
+    padding: 16px;
+    background-color: #303030;
+    border-radius: 4px;
+  }
+
+  em {
+    font-style: italic;
+  }
 }
