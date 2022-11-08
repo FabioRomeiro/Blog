@@ -1,14 +1,12 @@
 ---
 title: Como criar um blog com Nuxt Content
 description: Aprenda a criar um blog com Nuxt 3 e Nuxt Content 2. Sem back-end, apenas front-end utilizando o poder e facilidade do nuxt. Se preocupe apenas em escrever o conteúdo.
-publicationDate: '11/08/2022'
+publicationDate: '08/11/2022'
 tags:
   - Front-end
   - Nuxt
   - Vue
 ---
-
-# Como criar um blog com Nuxt Content
 
 ## Não quero back-end 🤢
 
@@ -26,7 +24,7 @@ que achar melhor! Se quiser ver o quão simples é começar a escrever com essa 
 
 O blog que vamos construir é esse aqui: [Demo blog](https://demo-blog.fabioromeiro.dev). Vamos um pouco além do vídeo referenciado na seção anterior, vamos estruturar melhor o projeto pensando em escalabilidade e manutenção.
 
-Se você só está aqui para ver o código final, tudo bem, tá aqui [Código fonte](https://github.com/fabioromeiro/demo-blog).
+Se você só está aqui para ver o código final, tudo bem, tá aqui o [Código fonte](https://github.com/fabioromeiro/demo-blog).
 
 > A vida é curta demais pra ler textos 🙃
 
