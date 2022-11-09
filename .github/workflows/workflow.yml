@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main
-      - romeiro/actions
 
 jobs:
   build:
