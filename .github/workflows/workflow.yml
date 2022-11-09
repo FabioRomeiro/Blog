@@ -9,8 +9,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
 
       - name: Install dependecies
         run: npm install
@@ -26,4 +28,4 @@ jobs:
           aws-region: us-east-1
       
       - name: Copy to S3
-        run: aws s3 sync ./output/public/. s3://fabioromeiro.dev
+        run: aws s3 sync ./.output/public s3://fabioromeiro.dev
