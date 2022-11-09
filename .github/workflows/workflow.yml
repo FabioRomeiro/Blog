@@ -29,4 +29,4 @@ jobs:
           aws-region: us-east-1
       
       - name: Copy to S3
-        run: aws s3 sync ../../output/public s3://fabioromeiro.dev
+        run: aws s3 sync ./.output/public s3://fabioromeiro.dev
