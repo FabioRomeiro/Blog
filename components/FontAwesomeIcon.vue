@@ -8,5 +8,5 @@
 const props = defineProps({
   icon: String
 })
-const href = `icons.svg#${props.icon}`
+const href = `/icons.svg#${props.icon}`
 </script>
