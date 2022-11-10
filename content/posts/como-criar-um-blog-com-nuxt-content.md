@@ -10,25 +10,29 @@ tags:
 
 ## Não quero back-end 🤢
 
-Trabalho com SEO faz um tempo, e existe um principal fator que faz um site ganhar posição no Google, conteúdo!
-Dado isso decidi dar a cara a tapa e começar a gerar conteúdo para disputar lugar no ranking das pesquisas.
-
 Criar um blog é muito trampo. **Back-end, banco de dados, infraestrutura, segurança, etc, eu não quero nada disso!**
-Só quero escrever num site próprio.
-
-Com o Nuxt Content é possível criar **um blog inteiro onde você só tem que se preocupar em escrever o conteúdo** do formato
+Só quero escrever num site próprio. Com Nuxt Content é possível criar **um blog inteiro onde você só tem que se preocupar em escrever o conteúdo** do formato
 que achar melhor! Se quiser ver o quão simples é começar a escrever com essa ferramenta, de uma olhada
 [nesse vídeo de 3 minutos](https://www.youtube.com/watch?v=o9e12WbKrd8) que eles disponibilizam na documentação.
 
-## Começando o projetinho 🏗️
+## O projeto 🏗️
 
-O blog que vamos construir é esse aqui: [Demo blog](https://demo-blog.fabioromeiro.dev). Vamos um pouco além do vídeo referenciado na seção anterior, vamos estruturar melhor o projeto pensando em escalabilidade e manutenção.
+1) [Inicialização do projeto](#1-inicialização-do-projeto)
+2) [O primeiro post](#2-o-primeiro-post)
+3) [Componentes](#3-componentes)
+4) [Layouts](#4-layouts)
+5) [Estilização](#5-estilização)
+6) [Metatags](#6-metatags)
+7) [Deploy](#7-deploy)
+8) [Aprimorando](#8-aprimorando)
 
-Se você só está aqui para ver o código final, tudo bem, tá aqui o [Código fonte](https://github.com/fabioromeiro/demo-blog).
+<horizontal-grid :gap="2" center>
 
-> A vida é curta demais pra ler textos 🙃
+  <highlight-link href="https://demo-blog.fabioromeiro.dev" label="Demo" icon="link"></highlight-link>
 
-Mas se quiser ver o passo a passo de como foi construído, só seguir lendo!
+  <highlight-link href="https://demo-blog.fabioromeiro.dev" label="Código fonte" icon="github"></highlight-link>
+
+</horizontal-grid>
 
 ### Versões usadas
 - Node: v16.15.0
@@ -36,15 +40,15 @@ Mas se quiser ver o passo a passo de como foi construído, só seguir lendo!
 - Nuxt: v3.0.0
 - Nuxt Content: v2.0.1
 
-### 1) Inicializa projeto com Nuxt Content
+### 1) Inicialização do projeto
 
-Primeiro passo, vamos criar um projeto Nuxt. No terminal entre na pasta que deseja adicionar o projeto e rode
+Primeiro passo, vamos criar um projeto Nuxt Content. No terminal entre na pasta que deseja adicionar o projeto e rode o comando
+
+> Troque **demo-blog** pelo nome do seu projeto
 
 ```bash
 npx nuxi init demo-blog -t content
 ```
-
-(Troque *demo-blog* pelo nome do seu projeto)
 
 Em seguida entre no diretório criado
 
@@ -64,12 +68,60 @@ Em seguida abra a pasta na sua IDE. Para quem usa VSCode digite o comando:
 code .
 ```
 
-### 2) Entendendo a estrutura do projeto
+Agora rode o projeto localmente com o comando:
 
-Então, o seu blog já está funcionando, é possível escrever conteúdos e navegar pelas páginas, porém ainda não tem sua cara.
+```bash
+npm run dev
+```
 
-Para customiza-lo, vamos entender como está estruturado.
+Com isso você deve conseguir acessar o projeto no navegador pelo link [http://localhost:3000].
+
+### 2) O primeiro post
+
+No diretório *content* crie um arquivo chamado *meu-primeiro-post.md*.
+
+Dentro dele digite qualquer coisa, por exemplo:
+
+```md
+Hello world
+```
+
+Este post que você acabou de criar é automaticamente transformado em uma página que fica
+disponível em: [localhost:3001/meu-primeiro-post](http://localhost:3001/meu-primeiro-post)
+
+Note que a url do post corresponde ao nome do arquivo criado, *meu-primeiro-post*. Se o nome
+do arquivo fosse *outro-post.md*, este ficaria disponivel na url *localhost:3001/**outro-post***.
+
+Como o post é escrito em markdown, você pode utilizar de todas as funcionalidades desta linguagem,
+que quando o usuário acessar seu post, o nuxt content converte automáticamente para HTML.
+
+Por exemplo, troque o conteudo de *meu-primeiro-post.md* para:
+
+```md
+# Meu primeiro post
+
+Um conteúdo muito legal e interessante
+```
+
+Ao salvar e ver no navegador as alterações, notará que agora possui um titulo, que corresponde a
+um *h1* do HTML, e um texto abaixo, que virou um *p*.
+
+::HorizontalGrid{center}
+![Print do primeiro post no Nuxt Content](../../assets/images/posts/como-criar-um-blog-com-nuxt-content/print-1.png)
+::
+
+Para mais informações e dicas de Markdown, recomendo este
+[guia de sintaxe da linguagem](https://www.markdownguide.org/extended-syntax).
 
 
+### 3) Componentes
 
+### 4) Layouts
 
+### 5) Estilização
+
+### 6) Metatags
+
+### 7) Deploy
+
+### 8) Aprimorando
