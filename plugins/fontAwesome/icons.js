@@ -4,7 +4,8 @@ import {
   faHouse,
   faSun,
   faMoon,
-  faEnvelope
+  faEnvelope,
+  faLink
 } from '@fortawesome/free-solid-svg-icons'
 
 import {
@@ -20,6 +21,7 @@ export default {
   sun: faSun,
   moon: faMoon,
   envelope: faEnvelope,
+  link: faLink,
   instagram: faInstagram,
   linkedin: faLinkedin,
   github: faGithub
