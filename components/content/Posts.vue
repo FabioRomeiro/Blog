@@ -45,6 +45,11 @@ const { data: posts } = useAsyncData(() => {
     display: flex;
     flex-direction: column;
     gap: 16px;
+    margin: 0;
+  }
+
+  &__post {
+    list-style: none;
   }
 
   &__link {

@@ -78,7 +78,7 @@
     align-items: center;
     gap: 24px;
     font-style: italic;
-    margin-left: 0;
+    margin: 0;
 
     li {
       position: relative;
