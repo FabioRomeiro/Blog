@@ -15,7 +15,10 @@ useHead({
 </script>
 
 <template>
-  <div class="article">
+  <div
+    v-if="post"
+    class="article"
+  >
     <header class="article__header">
       <NuxtLink
         class="article__link"
@@ -28,7 +31,7 @@ useHead({
         {{ post.title }}
       </h1>
       <div class="article__info">
-        <TagsList :tags="post.tags" />
+        <TagsList v-if="post && post.tags" :tags="post.tags" />
         <span class="article__date">
           Publicado em: {{ post.publicationDate }}
         </span>
