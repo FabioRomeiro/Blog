@@ -56,7 +56,7 @@
 <style lang="scss" scoped>
 .contact {
   line-height: 30px;
-  margin-left: 0;
+  margin: 0;
   
   @media (min-width: 931px) {
     font-size: .9em;

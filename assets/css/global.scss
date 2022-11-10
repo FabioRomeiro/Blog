@@ -78,12 +78,24 @@ body {
     font-weight: 500;
   }
 
-  ul {
+  ul, ol {
     margin-left: 24px;
+    margin-bottom: 16px;
 
     li {
-      list-style: disc;
       line-height: 1.5em;
+    }
+  }
+
+  ul {
+    li {
+      list-style: disc;
+    }
+  }
+
+  ol {
+    li {
+      list-style: decimal;
     }
   }
 
@@ -91,6 +103,7 @@ body {
     padding: 16px;
     background-color: #303030;
     border-radius: 4px;
+    margin-bottom: 16px;
   }
 
   em {
