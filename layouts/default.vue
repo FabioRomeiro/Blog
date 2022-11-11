@@ -23,6 +23,7 @@
     flex-direction: row-reverse;
     justify-content: space-between;
     box-shadow: 4px 0px 11px 4px rgba(0, 0, 0, 23%);
+    transition: background-color .2s ease-in-out;
 
     @media (min-width: 850px) {
       top: 0;

@@ -42,7 +42,7 @@ const pages = [
   &__list {
     display: flex;
     font-size: 16px;
-    margin-left: 0;
+    margin: 0;
 
     @media (max-width: 850px) {
       align-items: center;
