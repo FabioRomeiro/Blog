@@ -4,7 +4,7 @@
     class="introduction"
   >
     <img
-      src="~/assets/images/FabioRomeiro2.jpeg"
+      src="~/assets/images/FabioRomeiro2.jpg"
       alt="Foto do desenvolvedor Fábio Romeiro"
       width="150"
       height="150"

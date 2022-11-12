@@ -1,11 +1,10 @@
 <script setup>
-useHead({
+const head = useMetadata({
   title: 'Desenvolvedor Front-end',
   description: 'Me chamo Fábio Romeiro, trabalho como desenvolvedor focado em SEO. Escrevo artigos sobre tecnologias como Javascript, Vue.js, Nuxt.js e CSS.',
-  link: [
-    { rel: 'canonical', href: 'https://fabioromeiro.dev' }
-  ]
+  canonical: 'https://fabioromeiro.dev'
 })
+useHead(head)
 </script>
 
 <template>
