@@ -5,13 +5,18 @@ const { data: post } = await useAsyncData(`content-${path}`, () => {
   return queryContent().where({ _path: path }).findOne()
 })
 
-useHead({
+const head = useMetadata({
   title: post.title,
   description: post.description,
-  link: [
-    { rel: 'canonical', href: `https://fabioromeiro.dev${path}` }
+  canonical: `https://fabioromeiro.dev${path}`,
+  meta: [
+    { property: 'og:type', content: 'article' },
+    { property: 'article:author', content: 'https://fabioromeiro.dev' },
+    { property: 'article:publisher', content: 'https://fabioromeiro.dev' }
   ]
 })
+
+useHead(head)
 </script>
 
 <template>
