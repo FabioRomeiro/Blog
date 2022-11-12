@@ -11,8 +11,8 @@ export function useMetadata (data) {
     return linkMap
   }, {}) || {}
 
-  const canonical = data.canonical || linkMap['canonical']
-  const description = data.description || metaMap['description']
+  const canonicalContent = data.canonical || linkMap.canonical?.href
+  const descriptionContent = data.description || metaMap.description?.content
   const favicon = linkMap['icon']
 
   if (title) {
@@ -22,22 +22,26 @@ export function useMetadata (data) {
     }
   }
 
-  if (description) {
-    metaMap['og:description'] = metaMap['og:description'] || {
-      property: 'og:description',
-      content: description.content || description
+  if (descriptionContent) {
+    metaMap.description = metaMap.description || {
+      name: 'description',
+      content: descriptionContent
+    }
+    metaMap['og:description'] = {
+      property: 'description',
+      content: descriptionContent
     }
   }
   
-  if (canonical) {
-    linkMap['canonical'] = linkMap['canonical'] || {
+  if (canonicalContent) {
+    linkMap.canonical = linkMap.canonical || {
       rel: 'canonical',
-      href: canonical
+      href: canonicalContent
     }
 
     metaMap['og:url'] = metaMap['og:url'] || {
       property: 'og:url',
-      content: canonical.href || canonical
+      content: canonicalContent
     }
   }
 
