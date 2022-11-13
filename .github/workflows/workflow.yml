@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main
-      - romeiro/cloudfront-invalidation
 
 jobs:
   build:
