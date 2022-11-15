@@ -116,6 +116,85 @@ Para mais informações e dicas de Markdown, recomendo este
 
 ### 3) Componentes
 
+Alguns posts deste blog vão precisa de uma mensagem de aviso antes falando as informações estão deprecadas.
+
+Você poderia toda vez que for escrever um post copiar e colar a mensagem inteira de um para o outro, porém componentiza-la seria a melhor solução.
+
+Para isso, crie na raiz o projeto um diretório chamado components, onde ficarão todos os componentes do projeto.
+
+```bash
+mkdir components
+```
+
+Dentro de components, cria um diretório onde ficarão os componentes que serão utilizados dentro dos conteúdos:
+
+```bash
+cd components
+mkdir content
+```
+
+Dentro deste novo diretório, adicione um novo arquivo que será o nosso componente, ele poderá se chamar `DeprecatedMessage.vue`
+
+```bash
+cd content
+touch DeprecatedMessage.vue
+```
+
+Agora neste arquivo, coloque o seguinte conteúdo:
+
+```html
+<template>
+  <p>Atenção, o conteúdo deste post está deprecado!</p>
+</template>
+```
+
+Com o componente criado, adicione-o dentro do seu post com a seguinte sintaxe:
+
+```markdown
+# Meu primeiro post
+
+Um conteúdo muito legal e interessante
+
+:DeprecatedMessage
+```
+
+O nuxt lida importa o componente automáticamente, então não precisa se preocupar com isso.
+
+Pode ser que o componente não apareça e um erro seja exibido no console, isso acontece pois um novo arquivo de componente foi criado e o nuxt não conseguiu identifica-lo. Para resolver, basta parar o blog no terminal e rodar novamente.
+
+Queremos que o componente seja mais flexivel, além da mensagem padrão escrita nele, eu quero colocar mais conteúdo abaixo da mensagem.
+
+É possível fazer isso utilizando slots.
+
+Modifique o componente para receber um slot abaixo da mensagem:
+
+```html
+<template>
+  <div>
+    <p>Atenção, o conteúdo deste post está deprecado!</p>
+    <slot></slot>
+  </div>
+</template>
+```
+
+O componente deve continuar funcionando normalmente no post daquela maneira que preenchemos anteriormente, mas para preencher o slot, é necessário fazer desta maneira:
+
+```markdown
+# Meu primeiro post
+
+Um conteúdo muito legal e interessante
+
+::DeprecatedMessage
+  Recomendo que leia a documentação da tecnologia para ficar mais atualizado.
+::
+```
+
+Desta maneira o resultado final deve ser:
+
+::HorizontalGrid{center}
+![Print do post com novo componente](../../assets/images/posts/como-criar-um-blog-com-nuxt-content/print-2.png)
+::
+
 ### 4) Layouts
 
 ### 5) Estilização
