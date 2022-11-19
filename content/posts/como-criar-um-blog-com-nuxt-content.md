@@ -116,6 +116,10 @@ Para mais informações e dicas de Markdown, recomendo este
 
 ### 3) Componentes
 
+-----------
+FAZER SOBRE LISTAGEM DE POSTS
+-----------
+
 Alguns posts deste blog vão precisa de uma mensagem de aviso antes falando as informações estão deprecadas.
 
 Você poderia toda vez que for escrever um post copiar e colar a mensagem inteira de um para o outro, porém componentiza-la seria a melhor solução.
