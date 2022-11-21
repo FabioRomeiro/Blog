@@ -117,7 +117,7 @@ Para mais informações e dicas de Markdown, recomendo este
 ### 3) Componentes
 
 -----------
-FAZER SOBRE LISTAGEM DE POSTS
+FAZER SOBRE LISTAGEM DE POSTS  
 -----------
 
 Alguns posts deste blog vão precisa de uma mensagem de aviso antes falando as informações estão deprecadas.
