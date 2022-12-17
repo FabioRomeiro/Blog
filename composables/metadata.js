@@ -1,18 +1,11 @@
 export function useMetadata (data) {
-  const { title, link, meta } = data
+  const { title, link = [], meta = [] } = data
   
-  const metaMap = meta?.reduce((metaMap, meta) => {
-    metaMap[meta.property || meta.name] = meta
-    return metaMap
-  }, {}) || {}
+  const metaMap = mapMetatagArray(meta, ['property', 'name'])
+  const linkMap = mapMetatagArray(link, ['rel'])
 
-  const linkMap = link?.reduce((linkMap, link) => {
-    linkMap[link.rel] = link
-    return linkMap
-  }, {}) || {}
+  const { canonical = linkMap.canonical?.href, description = metaMap.description?.content } = data
 
-  const canonicalContent = data.canonical || linkMap.canonical?.href
-  const descriptionContent = data.description || metaMap.description?.content
   const favicon = linkMap['icon']
 
   if (title) {
@@ -22,26 +15,26 @@ export function useMetadata (data) {
     }
   }
 
-  if (descriptionContent) {
+  if (description) {
     metaMap.description = metaMap.description || {
       name: 'description',
-      content: descriptionContent
+      content: description
     }
     metaMap['og:description'] = {
       property: 'description',
-      content: descriptionContent
+      content: description
     }
   }
   
-  if (canonicalContent) {
+  if (canonical) {
     linkMap.canonical = linkMap.canonical || {
       rel: 'canonical',
-      href: canonicalContent
+      href: canonical
     }
 
     metaMap['og:url'] = metaMap['og:url'] || {
       property: 'og:url',
-      content: canonicalContent
+      content: canonical
     }
   }
 
@@ -62,4 +55,13 @@ export function useMetadata (data) {
     link: Object.values(linkMap),
     meta: Object.values(metaMap)
   }
+}
+
+function mapMetatagArray (arr, keys) {
+  const map = {}
+  for (const item of arr) {
+    const key = keys.find(k => !!item[k])
+    map[item[key]] = item
+  }
+  return map
 }
