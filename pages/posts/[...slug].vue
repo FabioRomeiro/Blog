@@ -1,13 +1,11 @@
 <script setup>
 const { path } = useRoute()
 
-const { data: post } = await useAsyncData(`content-${path}`, () => {
-  return queryContent().where({ _path: path }).findOne()
-})
+const post = await queryContent().where({ _path: usePathCleaner(path) }).findOne()
 
 useHead(() => useMetadata({
-  title: post.value.title,
-  description: post.value.description,
+  title: post.title,
+  description: post.description,
   canonical: `https://fabioromeiro.dev${path}`,
   meta: [
     { property: 'og:type', content: 'article' },
