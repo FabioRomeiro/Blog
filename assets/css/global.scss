@@ -105,6 +105,30 @@ body {
     background-color: #303030;
     border-radius: 4px;
     margin-bottom: 16px;
+    overflow-x: auto;
+    line-height: 1.2em;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: .9em;
+    color: #ffffff;
+
+    /* width */
+    &::-webkit-scrollbar {
+      height: 6px;
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+      background-color: #505050;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: #7a7a7a;
+    }
+
+    &::-webkit-scrollbar-track,
+    &::-webkit-scrollbar-thumb {
+      border-radius: 5px;
+    }
   }
 
   em {
