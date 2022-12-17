@@ -5,13 +5,13 @@ const { data: post } = await useAsyncData(`content-${path}`, () => {
   return queryContent().where({ _path: path }).findOne()
 })
 
-const head = useMetadata({
-  title: post.title,
-  description: post.description,
+const head = () => useMetadata({
+  title: post.value.title,
+  description: post.value.description,
   canonical: `https://fabioromeiro.dev${path}`,
   meta: [
     { property: 'og:type', content: 'article' },
-    { property: 'article:author', content: 'https://fabioromeiro.dev' },
+    { property: 'article:author', content: 'Fábio Romeiro' },
     { property: 'article:publisher', content: 'https://fabioromeiro.dev' }
   ]
 })
@@ -87,7 +87,7 @@ useHead(head)
       padding: 24px;
     }
 
-    &::v-deep(:first-child) {
+    &::v-deep(div > *:first-child) {
       margin-top: 0;
     }
   }

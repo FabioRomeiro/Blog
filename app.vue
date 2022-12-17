@@ -18,6 +18,7 @@ const head = useMetadata({
   description: 'Artigos sobre tecnologia para simplificar o que pode ser desnecessariamente complicado. Conteúdos sobre Javascript, Vue.js, Nuxt.js e CSS.',
   meta: [
     { name: 'author', content: 'Fabio Romeiro' },
+    { name: 'publisher', content: 'https://fabioromeiro.dev' },
     { name: 'robots', content: 'INDEX, FOLLOW' },
     { property: 'og:site_name', content: 'Fábio Romeiro' },
     { property: 'og:type', content: 'website' },
