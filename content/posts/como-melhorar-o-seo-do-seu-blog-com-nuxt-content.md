@@ -1,7 +1,7 @@
 ---
 title: Como melhorar o SEO do seu blog com Nuxt Content?
 description: Conteúdo é o que mais importa quando se trata de um bom SEO, mas para que os buscadores consigam acessar e indexar seu site mais facilmente podemos aplicar as boas práticas abordadas neste artigo.
-publicationDate: 12/16/2022
+publicationDate: 16/12/2022
 tags:
   - Front-end
   - Nuxt
@@ -12,7 +12,7 @@ tags:
 
 ## SEO é todo sobre conteúdo ✍️
 
-Se tem uma coisa que aprendi estudando e trabalhando com SEO, é que no final, o que importa mesmo é o conteúdo do seu site. Ele pode não ter a melhor performance do mercado, pode não ter a tecnologia mais nova, mas **se ele for rico em conteúdo, ele vai disputar com os grandes concorrentes no primeiro lugar do Google**, e isso leva tempo e muito esforço. 😩
+Se tem uma coisa que aprendi estudando e trabalhando com SEO, é que no final, o que importa mesmo é o conteúdo do seu site. Ele pode não ter a melhor performance do mercado, pode não ter a tecnologia mais nova, mas **se ele for rico em conteúdo, ele vai disputar com os grandes concorrentes no primeiro lugar do Google**, e isso leva tempo e muito esforço 😩
 
 Mas se você está aqui, você já está no caminho certo, pois um **blog é um paraíso de conteúdo** relevante para o seu público alvo!
 

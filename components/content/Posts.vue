@@ -20,19 +20,17 @@
   </section>
 </template>
 
-<script setup lang="ts">
+<script setup>
 const { limit } = defineProps({
   limit: Number
 })
 
-const { data: posts } = useAsyncData(() => {
-  return queryContent('/posts')
+const posts = await queryContent()
   .only(['title', 'description', 'publicationDate', 'tags', '_path'])
   .where({ _path: { $ne: '/posts' } })
   .sort({ publicationDate: 1 })
   .limit(limit)
   .find()
-})
 </script>
 
 <style lang="scss">

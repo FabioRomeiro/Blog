@@ -4,8 +4,8 @@ export function useMetadata (data) {
   const metaMap = mapMetatagArray(meta, ['property', 'name'])
   const linkMap = mapMetatagArray(link, ['rel'])
 
-  const { canonical = linkMap.canonical?.href, description = metaMap.description?.content } = data
-
+  const { description = metaMap.description?.content } = data
+  const canonical = usePathCleaner(data.canonical || linkMap.canonical?.href)
   const favicon = linkMap['icon']
 
   if (title) {
