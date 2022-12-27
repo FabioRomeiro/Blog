@@ -42,7 +42,6 @@ const pages = [
   &__list {
     display: flex;
     font-size: 16px;
-    margin: 0;
 
     @media (max-width: 850px) {
       align-items: center;
@@ -79,10 +78,6 @@ const pages = [
     .icon {
       margin-right: 8px;
     }
-  }
-
-  &__item {
-    list-style: none;
   }
 }
 </style>

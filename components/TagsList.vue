@@ -21,11 +21,5 @@ const { tags } = defineProps({
   align-items: center;
   gap: 8px;
   flex-wrap: wrap;
-  margin-left: 0;
-  margin-bottom: 0;
-
-  li {
-    list-style: none;
-  }
 }
 </style>
