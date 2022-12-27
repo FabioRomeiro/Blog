@@ -79,27 +79,6 @@ body {
     font-weight: 500;
   }
 
-  ul, ol {
-    margin-left: 24px;
-    margin-bottom: 16px;
-
-    li {
-      line-height: 1.5em;
-    }
-  }
-
-  ul {
-    li {
-      list-style: disc;
-    }
-  }
-
-  ol {
-    li {
-      list-style: decimal;
-    }
-  }
-
   pre {
     padding: 16px;
     background-color: #303030;
@@ -133,5 +112,45 @@ body {
 
   em {
     font-style: italic;
+  }
+
+  ul, ol {
+    li {
+      line-height: 1.5em;
+    }
+  }
+
+  #content {
+    ul, ol {
+      margin-left: 24px;
+      margin-bottom: 16px;
+
+      li {
+        &:not(:last-child) {
+          margin-bottom: 16px;
+        }
+      }
+    }
+  
+    ul {
+      li {
+        list-style: disc;
+      }
+    }
+  
+    ol {
+      li {
+        list-style: decimal;
+      }
+    }
+
+    :not(pre) {
+      code {
+        background-color: #303030;
+        padding: 4px;
+        border-radius: 4px;
+        color: #c7c7c7;
+      }
+    }
   }
 }

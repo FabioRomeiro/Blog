@@ -7,7 +7,6 @@ tags:
   - Nuxt
   - Vue
   - SEO
-
 ---
 
 ## SEO é todo sobre conteúdo ✍️

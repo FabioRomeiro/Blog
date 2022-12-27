@@ -56,7 +56,6 @@
 <style lang="scss" scoped>
 .contact {
   line-height: 30px;
-  margin: 0;
   
   @media (min-width: 931px) {
     font-size: .9em;
@@ -68,10 +67,6 @@
     align-items: center;
     gap: 16px;
     font-size: 1.3em;
-  }
-
-  li {
-    list-style: none;
   }
 
   &__link {
