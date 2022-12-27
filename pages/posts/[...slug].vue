@@ -28,9 +28,12 @@ useHead(() => useMetadata({
         <Chevron left />
         Ver todos os artigos
       </NuxtLink>
-      <h1>
+      <h1 class="article__title">
         {{ post.title }}
       </h1>
+      <p class="article__description">
+        {{ post.description }}
+      </p>
       <div class="article__info">
         <TagsList v-if="post && post.tags" :tags="post.tags" />
         <span class="article__date">
@@ -39,7 +42,7 @@ useHead(() => useMetadata({
       </div>
     </header>
     <main class="article__content">
-      <ContentDoc></ContentDoc>
+      <ContentDoc id="content"></ContentDoc>
     </main>
   </div>
 </template>
@@ -48,6 +51,14 @@ useHead(() => useMetadata({
 .article {
   &__header {
     margin-bottom: 32px;
+  }
+
+  &__title {
+    margin-bottom: 8px;
+  }
+
+  &__description {
+    opacity: .8;
   }
 
   &__info {
