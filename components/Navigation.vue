@@ -6,7 +6,7 @@ const pages = [
     title: 'Início'
   },
   {
-    path: '/posts',
+    path: '/articles',
     icon: '📰',
     title: 'Artigos'
   },

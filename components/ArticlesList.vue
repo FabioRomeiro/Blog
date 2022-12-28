@@ -1,18 +1,18 @@
 <template>
-  <section v-once class="posts">
-    <ol class="posts__list">
+  <section v-once class="articles">
+    <ol class="articles__list">
       <li
-        v-for="post in posts"
+        v-for="post in articles"
         :key="post.title"
-        class="posts__post"
+        class="articles__post"
       >
         <PostItem :post="post" />
       </li>
     </ol>
     <NuxtLink
-      v-if="limit && posts && posts.length >= limit"
-      to="/posts"
-      class="posts__link"
+      v-if="limit && articles && articles.length >= limit"
+      to="/articles"
+      class="articles__link"
     >
       <span>Ver todos os artigos</span>
       <Chevron />
@@ -25,16 +25,16 @@ const { limit } = defineProps({
   limit: Number
 })
 
-const posts = await queryContent('posts')
+const articles = await queryContent('articles')
   .only(['title', 'description', 'publicationDate', 'tags', '_path'])
-  .where({ _path: { $ne: '/posts' } })
+  .where({ _path: { $ne: '/articles' } })
   .sort({ publicationDate: 1 })
   .limit(limit)
   .find()
 </script>
 
 <style lang="scss">
-.posts {
+.articles {
   display: flex;
   flex-direction: column;
   gap: 32px;
