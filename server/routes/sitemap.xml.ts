@@ -8,20 +8,22 @@ export default defineEventHandler(async (event) => {
   
   const priorityMap = {
     '/': 1.0,
-    '/posts': 0.9
+    '/posts': 0.8,
+    '/glossary': 0.8
   }
   
   const docs = await serverQueryContent(event).find()
   const pages = [
     { _path: '/' },
     { _path: '/posts' },
+    { _path: '/glossary' },
     ...docs
   ]
 
   for (const page of pages) {
     sitemap.write({
       url: page._path,
-      priority: priorityMap[page._path] || 0.8,
+      priority: priorityMap[page._path] || 0.9,
       changefreq: 'monthly'
     })
   }

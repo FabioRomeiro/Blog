@@ -1,7 +1,7 @@
 <script setup>
 const { path } = useRoute()
 
-const post = await queryContent('posts').where({ _path: usePathCleaner(path) }).findOne()
+const item = await queryContent('glossary').where({ _path: usePathCleaner(path) }).findOne()
 
 useHead(() => useMetadata({
   canonical: `https://fabioromeiro.dev${path}`,
@@ -15,48 +15,41 @@ useHead(() => useMetadata({
 
 <template>
   <div
-    v-if="post"
-    class="article"
+    v-if="item"
+    class="glossary-item"
   >
-    <header class="article__header">
+    <header class="glossary-item__header">
       <NuxtLink
-        class="article__link"
-        to="/posts"
+        class="glossary-item__link"
+        to="/glossary"
       >
         <Chevron left />
-        Ver todos os artigos
+        Ver todo o glossário
       </NuxtLink>
-      <h1 class="article__title">
-        {{ post.title }}
+      <h1 class="glossary-item__title">
+        {{ item.title }}
       </h1>
-      <p class="article__description">
-        {{ post.description }}
-      </p>
-      <div class="article__info">
-        <TagsList v-if="post && post.tags" :tags="post.tags" />
-        <span class="article__date">
-          Publicado em: {{ post.publicationDate }}
+      <div class="glossary-item__info">
+        <TagsList v-if="item && item.tags" :tags="item.tags" />
+        <span class="glossary-item__date">
+          Publicado em: {{ item.publicationDate }}
         </span>
       </div>
     </header>
-    <main class="article__content">
+    <main class="glossary-item__content">
       <ContentDoc id="content"></ContentDoc>
     </main>
   </div>
 </template>
 
 <style lang="scss" scoped>
-.article {
+.glossary-item {
   &__header {
     margin-bottom: 32px;
   }
 
   &__title {
     margin-bottom: 8px;
-  }
-
-  &__description {
-    opacity: .8;
   }
 
   &__info {

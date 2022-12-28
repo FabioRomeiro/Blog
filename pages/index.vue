@@ -37,6 +37,11 @@ useHead(head)
       <h2>📰 Últimos artigos</h2>
       <Posts :limit="5" />
     </section>
+
+    <section class="blog__posts">
+      <h2>📕 Glossário</h2>
+      <GlossaryItemsList :limit="20" />
+    </section>
   </main>
 </template>
 
