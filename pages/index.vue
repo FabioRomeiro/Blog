@@ -33,12 +33,12 @@ useHead(head)
       </blockquote>
     </section>
 
-    <section class="blog__posts">
+    <section class="blog__section">
       <h2>📰 Últimos artigos</h2>
-      <Posts :limit="5" />
+      <ArticlesList :limit="5" />
     </section>
 
-    <section class="blog__posts">
+    <section class="blog__section">
       <h2>📕 Glossário</h2>
       <GlossaryItemsList :limit="20" />
     </section>
@@ -81,7 +81,7 @@ useHead(head)
     }
   }
 
-  &__posts {
+  &__section {
     opacity: 0;
     animation: fade-in ease-out .4s $title-animation-duration forwards;
   }

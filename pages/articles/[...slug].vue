@@ -1,7 +1,7 @@
 <script setup>
 const { path } = useRoute()
 
-const post = await queryContent('posts').where({ _path: usePathCleaner(path) }).findOne()
+const post = await queryContent('articles').where({ _path: usePathCleaner(path) }).findOne()
 
 useHead(() => useMetadata({
   canonical: `https://fabioromeiro.dev${path}`,
@@ -21,7 +21,7 @@ useHead(() => useMetadata({
     <header class="article__header">
       <NuxtLink
         class="article__link"
-        to="/posts"
+        to="/articles"
       >
         <Chevron left />
         Ver todos os artigos
