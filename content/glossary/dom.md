@@ -95,11 +95,9 @@ Pense no DOM como se fosse um prédio e o Virtual DOM a sua planta, ou seja, o V
 
 Virtual DOM não é uma ferramenta, é um padrão de representação.
 
-<!-- TODO: Future link
 ::Callout
-Para saber mais sobre Virtual DOM e suas vantagens, veja [O que é Virtual DOM?]()
+Para saber mais sobre Virtual DOM e suas vantagens, veja [O que é Virtual DOM?](/glossary/virtual-dom)
 ::
--->
 
 ## O que é querySelector?
 
