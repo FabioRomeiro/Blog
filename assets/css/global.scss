@@ -144,13 +144,11 @@ body {
       }
     }
 
-    :not(pre) {
-      code {
-        background-color: #303030;
-        padding: 4px;
-        border-radius: 4px;
-        color: #c7c7c7;
-      }
+    code:not(pre code) {
+      background-color: #303030;
+      padding: 4px;
+      border-radius: 4px;
+      color: #c7c7c7;
     }
   }
 }
