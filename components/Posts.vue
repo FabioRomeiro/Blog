@@ -25,7 +25,7 @@ const { limit } = defineProps({
   limit: Number
 })
 
-const posts = await queryContent()
+const posts = await queryContent('posts')
   .only(['title', 'description', 'publicationDate', 'tags', '_path'])
   .where({ _path: { $ne: '/posts' } })
   .sort({ publicationDate: 1 })

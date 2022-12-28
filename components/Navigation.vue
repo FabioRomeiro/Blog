@@ -9,6 +9,11 @@ const pages = [
     path: '/posts',
     icon: '📰',
     title: 'Artigos'
+  },
+  {
+    path: '/glossary',
+    icon: '📕',
+    title: 'Glossário'
   }
 ]
 </script>
