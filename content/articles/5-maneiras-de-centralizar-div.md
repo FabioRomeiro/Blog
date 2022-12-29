@@ -3,6 +3,7 @@ title: 5 maneiras de centralizar uma div
 description: “Como centralizar uma div?” é com certeza uma das coisas mais pesquisadas por quem mexe com desenvolvimento web, principalmente pela galera do back-end. Neste artigo vou mostrar 5 maneiras de alcançar este objetivo.
 publicationDate: 28/12/2022
 tags:
+  - Front-end
   - HTML
   - CSS
 ---
