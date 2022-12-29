@@ -2,9 +2,10 @@
 title: O que é DOM?
 subject: DOM
 isPluralSubject: false
-description: Clique para saber mais sobre DOM, aproveite também para explorar mais conteúdos sobre Javascript e HTML.
+description: Clique para saber mais sobre DOM, aproveite também para explorar mais conteúdos sobre Front-end, Javascript e HTML.
 publicationDate: 28/12/2022
 tags:
+  - Front-end
   - Javascript
   - HTML
 ---
