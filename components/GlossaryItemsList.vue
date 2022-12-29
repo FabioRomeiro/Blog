@@ -48,13 +48,19 @@ function getPreposition (isPluralSubject) {
   gap: 32px;
 
   &__list {
-    column-count: 4;
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
   }
 
   &__item {
     line-height: 2em;
-
+    
     a {
+      padding: 8px;
+      border-radius: 3px;
+      background-color: var(--contrast-color-lighter);
+
       *:not(strong) {
         color: var(--contrast-color);
         opacity: .6;
