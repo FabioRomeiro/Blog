@@ -23,15 +23,14 @@ const errorMessage = computed(() => {
   return error.message
 })
 
-function handleError () {
-  clearError()
-}
-
 useHead(useMetadata({
   title: errorTitle.value,
   titleTemplate: '%s | Fábio Romeiro',
   meta: [
     { name: 'robots', content: 'NOINDEX, NOFOLLOW' },
+  ],
+  link: [
+    { rel: 'icon', href: useFaviconPath(), type: 'image/x-icon' }
   ]
 }))
 </script>

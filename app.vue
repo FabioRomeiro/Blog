@@ -9,9 +9,6 @@
 <script setup>
 import picture from '~/assets/images/FabioRomeiro2.jpg'
 
-const colorMode = useColorMode()
-const faviconPath = computed(() => `/favicon${colorMode.value === 'light' ? '-light' : ''}.svg`)
-
 const head = useMetadata({
   title: 'Desenvolvedor Front-end',
   titleTemplate: '%s | Fábio Romeiro',
@@ -29,7 +26,7 @@ const head = useMetadata({
     { property: 'og:image:height', content: '990' }
   ],
   link: [
-    { rel: 'icon', href: faviconPath, type: 'image/x-icon' }
+    { rel: 'icon', href: useFaviconPath(), type: 'image/x-icon' }
   ],
   htmlAttrs: {
     lang: 'pt-br'
