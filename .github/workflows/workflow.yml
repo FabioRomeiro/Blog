@@ -28,7 +28,7 @@ jobs:
           aws-region: us-east-1
       
       - name: Copy to S3
-        run: aws s3 sync ./.output/public ${{ secrets.S3_BUCKET_PATH }}
+        run: aws s3 sync ./.output/public ${{ secrets.S3_BUCKET_PATH }} --delete
 
       - name: Invalidate cache Cloudfront
         run: aws cloudfront create-invalidation --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }} --paths "/*"
