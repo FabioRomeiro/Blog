@@ -8,7 +8,6 @@ const head = useMetadata({
 useHead(head)
 </script>
 
-
 <template>
   <main>
     <h1>Artigos</h1> 
