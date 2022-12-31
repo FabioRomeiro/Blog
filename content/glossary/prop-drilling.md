@@ -14,7 +14,7 @@ Quando um projeto front-end escala, múltiplos componentes surgem, e muitas veze
 
 Suponha que o componente A possui uma informação que precisa ser utilizada no componente D. Para esta informação sair do A e chegar no D é normal criarmos props, que são parâmetros dos componentes, nos componentes B, C e D. Este processo de criar uma prop para cada componente no caminho para mover a informação é conhecido como _Prop Drilling_.
 
-![Prop Drilling](/assets/images/glossary/prop-drilling/PropDrilling.svg)
+![Prop Drilling](/images/glossary/prop-drilling/PropDrilling.svg)
 
 _Drilling_ significa "Perfuração" em inglês, este nome vem da necessidade de “perfurar” os componentes com props para passar a informação.
 
@@ -34,7 +34,7 @@ Existem duas principais maneiras de contornar este problema, uma não muito boa 
 
 A primeira solução, é utilizando provide/inject, o componente A provê (provide) a informação necessária no componente D para todos os seus descendentes, dessa maneira qualquer componente abaixo de A na árvore de componentes poderá injetar (inject) a informacao em seu componente e utilizá-la sem precisar movê-la de um lado para o outro.
 
-![Provide / Inject](/assets/images/glossary/prop-drilling/ProvideInject.svg)
+![Provide / Inject](/images/glossary/prop-drilling/ProvideInject.svg)
 
 Isso pode ser feito facilmente em Vue, por exemplo, utilizando esta sintaxe:
 
@@ -70,7 +70,7 @@ E o trabalho é ainda mais misterioso do que com as props pois nem todos os comp
 
 Esta solucao é a ideal para muitos casos. Se está informação ficar em um servico separado da árvore de componentes, sempre quando algum deles precisar acessá-la saberá exatamente onde procurar, evitando o mistério da origem da informação e deixará escalável a consulta e adição de novas informações compartilhadas pelos componentes já que elas estão concentradas em um mesmo lugar.
 
-![State Manager](/assets/images/glossary/prop-drilling/StateManager.svg)
+![State Manager](/images/glossary/prop-drilling/StateManager.svg)
 
 <!--
 ::Callout
