@@ -150,5 +150,10 @@ body {
       border-radius: 4px;
       color: #c7c7c7;
     }
+
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
   }
 }
