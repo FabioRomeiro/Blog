@@ -43,7 +43,6 @@ export default {}
   background-color: var(--contrast-color-light);
   padding: 8px;
   border-radius: 3px;
-  margin-bottom: 16px;
 
   &__emoji {
     margin-top: 8px;

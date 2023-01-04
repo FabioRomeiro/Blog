@@ -123,13 +123,6 @@ body {
   #content {
     ul, ol {
       margin-left: 24px;
-      margin-bottom: 16px;
-
-      li {
-        &:not(:last-child) {
-          margin-bottom: 16px;
-        }
-      }
     }
   
     ul {
@@ -154,6 +147,14 @@ body {
     img {
       width: 100%;
       object-fit: cover;
+    }
+
+    .file-snippet,
+    .callout,
+    ul,
+    ol,
+    li:not(:last-child) {
+      margin-bottom: 16px;
     }
   }
 }
