@@ -9,6 +9,8 @@
 <script setup>
 import picture from '~/assets/images/FabioRomeiro2.jpg'
 
+const favicon = useFaviconPath()
+
 const head = useMetadata({
   title: 'Desenvolvedor Front-end',
   titleTemplate: '%s | Fábio Romeiro',
@@ -20,13 +22,13 @@ const head = useMetadata({
     { property: 'og:site_name', content: 'Fábio Romeiro' },
     { property: 'og:type', content: 'website' },
     { property: 'og:image', itemprop: 'image', content: picture },
-    { name: 'msapplication-TileImage', content: picture },
+    { name: 'msapplication-TileImage', content: favicon },
     { property: 'og:image:type', content: 'image/jpg' },
     { property: 'og:image:width', content: '990' },
     { property: 'og:image:height', content: '990' }
   ],
   link: [
-    { rel: 'icon', href: useFaviconPath(), type: 'image/x-icon' }
+    { rel: 'icon', href: favicon, type: 'image/x-icon' }
   ],
   htmlAttrs: {
     lang: 'pt-br'

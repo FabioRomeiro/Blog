@@ -7,6 +7,10 @@ useHead(() => useMetadata({
   canonical: `https://fabioromeiro.dev${path}`,
   meta: [
     { property: 'og:type', content: 'article' },
+    { property: 'og:image', itemprop: 'image', content: post.cover?.src },
+    { property: 'og:image:type', content: 'image/jpg' },
+    { property: 'og:image:width', content: '1200' },
+    { property: 'og:image:height', content: '627' },
     { property: 'article:author', content: 'Fábio Romeiro' },
     { property: 'article:publisher', content: 'https://fabioromeiro.dev' }
   ]
@@ -32,6 +36,12 @@ useHead(() => useMetadata({
       <p class="article__description">
         {{ post.description }}
       </p>
+      <img
+        v-if="post.cover"
+        class="article__cover"
+        :src="post.cover.src"
+        :alt="post.cover.alt"
+      >
       <div class="article__info">
         <TagsList v-if="post && post.tags" :tags="post.tags" />
         <span class="article__date">
@@ -49,6 +59,14 @@ useHead(() => useMetadata({
 .article {
   &__header {
     margin-bottom: 32px;
+  }
+
+  &__cover {
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 16px;
+    max-height: 400px;
+    border-radius: 4px;
   }
 
   &__title {
