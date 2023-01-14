@@ -77,11 +77,16 @@ const pages = [
     @media (max-width: 850px) {
       height: 60px;
       align-items: center;
-      padding: 0 24px;
+      padding: 0 16px;
+      flex-direction: column;
+      justify-content: center;
+      max-width: 60px;
     }
 
     .icon {
-      margin-right: 8px;
+      @media (min-width: 851px) {
+        margin-right: 8px;
+      }
     }
   }
 }
