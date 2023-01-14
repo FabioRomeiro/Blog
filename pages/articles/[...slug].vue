@@ -22,6 +22,7 @@ useHead(() => useMetadata({
     v-if="post"
     class="article"
   >
+    <ReadingProgressBar />
     <header class="article__header">
       <NuxtLink
         class="article__link"

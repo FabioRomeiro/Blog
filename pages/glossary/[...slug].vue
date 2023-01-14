@@ -18,6 +18,7 @@ useHead(() => useMetadata({
     v-if="item"
     class="glossary-item"
   >
+    <ReadingProgressBar />
     <header class="glossary-item__header">
       <NuxtLink
         class="glossary-item__link"
