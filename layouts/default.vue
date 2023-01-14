@@ -21,7 +21,6 @@
 
   &__progress-bar {
     position: fixed;
-    left: $menu-width-desktop;
     top: 0;
     left: 0;
     z-index: 1;
@@ -29,6 +28,7 @@
     
     @media (min-width: 850px) {
       width: calc(100% - #{$menu-width-desktop});
+      left: $menu-width-desktop;
     }
   }
 
