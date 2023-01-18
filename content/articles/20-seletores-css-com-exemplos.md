@@ -199,7 +199,7 @@ Pense na situação em que você quer que todos os usuarios de uma lista que rec
 
 ## 13) Posição (`.example:nth-child(2n)`)
 
-Este seletor permite criar padrões específicos de estilização baseado na posição de um elemento em uma lista. Ele é muito flexível e pode ser utilizado de várias maneiras, como vamos ver brevemente. Sua utilização é com o seletor :nth que recebe como parâmetro a posição do item que será estilizado.
+Este seletor permite criar padrões específicos de estilização baseado na posição de um elemento em uma lista. Ele é muito flexível e pode ser utilizado de várias maneiras, como vamos ver brevemente. Sua utilização é com o seletor `:nth` que recebe como parâmetro a posição do item que será estilizado.
 
 Um exemplo muito comum de utiliza-lo é em linhas de uma tabela extensa, para facilitar a leitura é intercalar a cor de cada linha com uma tonalidade levemente diferente:
 
