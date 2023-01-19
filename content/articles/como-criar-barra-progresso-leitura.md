@@ -1,7 +1,7 @@
 ---
 title: Como criar uma barra de progresso de leitura?
 description: Em livros temos a sensação de progresso com o passar dos capitulos enquanto em sites é padronizado a barra de progresso em cima da tela. Neste artigo vamos entender como implementa-la em seu site.
-publicationDate: 14/01/2022
+publicationDate: 14/01/2023
 tags:
   - Front-end
   - HTML
