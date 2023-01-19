@@ -13,12 +13,7 @@ useHead(head)
 
     <section class="blog__content">
       <h2 class="title">Olá</h2>
-  
-      <p>
-        Trabalho como desenvolvedor na <a href="https://www.buser.com.br" target="_blank">Buser</a>
-        no time de SEO (Search Engine Optimization).
-      </p>
-  
+
       <p>
         Muita coisa na vida é complicada e precisa ser simplificada, então para facilitar para quem
         está com problemas, escrevo esses artigos baseados nas experiências que tive.

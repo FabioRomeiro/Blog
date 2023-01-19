@@ -21,16 +21,20 @@
 </template>
 
 <script setup>
+import { sortQueryResultsByDate } from '~/helpers/contentList'
+
 const { limit } = defineProps({
   limit: Number
 })
 
-const articles = await queryContent('articles')
+const allArticles = await queryContent('articles')
   .only(['title', 'description', 'publicationDate', 'tags', '_path'])
   .where({ _path: { $ne: '/articles' } })
-  .sort({ publicationDate: 1 })
-  .limit(limit)
   .find()
+
+const articles = computed(() => {
+  return sortQueryResultsByDate(allArticles, 'publicationDate').slice(0, limit)
+})
 </script>
 
 <style lang="scss">

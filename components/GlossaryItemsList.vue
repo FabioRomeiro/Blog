@@ -1,14 +1,16 @@
 <script setup>
+import { sortQueryResultsByDate } from '~/helpers/contentList'
+
 const { limit } = defineProps({
   limit: Number
 })
 
-const glossaryItems = await queryContent('glossary')
+const allGlossaryItems = await queryContent('glossary')
   .only(['title', 'publicationDate', 'tags', 'subject', 'isPluralSubject','_path'])
   .where({ _path: { $ne: '/glossary' } })
-  .sort({ publicationDate: 1 })
-  .limit(limit)
   .find()
+
+const glossaryItems = computed(() => sortQueryResultsByDate(allGlossaryItems, 'publicationDate').slice(0, limit))
 
 function getPreposition (isPluralSubject) {
   return isPluralSubject ? 'são' : 'é'
