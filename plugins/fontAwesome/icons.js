@@ -4,13 +4,11 @@ import {
   faHouse,
   faSun,
   faMoon,
-  faEnvelope
 } from '@fortawesome/free-solid-svg-icons'
 
 import {
-  faInstagram,
   faLinkedin,
-  faGithub
+  faGithub,
 } from '@fortawesome/free-brands-svg-icons'
 
 export default {
@@ -19,8 +17,6 @@ export default {
   addressBook: faAddressBook,
   sun: faSun,
   moon: faMoon,
-  envelope: faEnvelope,
-  instagram: faInstagram,
   linkedin: faLinkedin,
   github: faGithub
 }

@@ -39,7 +39,3 @@ Em casos de reutilização de lógicas que não precisam da informação de esta
     ```
   ::
 ::
-
-::Callout
-Para saber em mais detalhe como criar um composable leia [Como criar um Composable em Vue 3?](/articles/como-criar-composable-vue-3)
-::

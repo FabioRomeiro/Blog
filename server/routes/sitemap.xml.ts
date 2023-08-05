@@ -8,14 +8,12 @@ export default defineEventHandler(async (event) => {
   
   const priorityMap = {
     '/': 1.0,
-    '/articles': 0.8,
     '/glossary': 0.8
   }
   
   const docs = await serverQueryContent(event).find()
   const pages = [
     { _path: '/' },
-    { _path: '/articles' },
     { _path: '/glossary' },
     ...docs
   ]

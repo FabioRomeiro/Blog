@@ -2,17 +2,10 @@
 const pages = [
   {
     path: '/',
-    icon: '🏠',
     title: 'Início'
   },
   {
-    path: '/articles',
-    icon: '📰',
-    title: 'Artigos'
-  },
-  {
     path: '/glossary',
-    icon: '📕',
     title: 'Glossário'
   }
 ]
@@ -32,9 +25,6 @@ const pages = [
           class="navigation__link"
           active-class="navigation__link--active"
         >
-          <span class="icon">
-            {{ page.icon }}
-          </span>
           {{ page.title }}
         </NuxtLink>
       </li>
@@ -47,15 +37,8 @@ const pages = [
   &__list {
     display: flex;
     font-size: 16px;
-
-    @media (max-width: 850px) {
-      align-items: center;
-    }
-
-    @media (min-width: 849px) {
-      padding: 8px 16px;
-      flex-direction: column;
-    }
+    align-items: center;
+    gap: 8px;
   }
   
   &__link {
@@ -64,13 +47,11 @@ const pages = [
     padding: 8px;
     color: var(--contrast-color);
 
-    &:not(&--active):hover {
+    &:hover {
       background-color: var(--secondary-color);
     }
 
     &--active {
-      background-color: var(--highlight-color);
-      color: var(--primary-color);
       font-weight: 500;
     }
 
@@ -81,12 +62,6 @@ const pages = [
       flex-direction: column;
       justify-content: center;
       max-width: 60px;
-    }
-
-    .icon {
-      @media (min-width: 851px) {
-        margin-right: 8px;
-      }
     }
   }
 }

@@ -32,12 +32,6 @@ Toda alteração que acontece em objetos javascript reativos em Vue 3 necessida 
 
 Um dos 3 core modules do Vue, o Renderer, possui 3 fases de execução, sendo a última, conhecida como Patch, responsável pela atualização da interface do usuário quando um gatilho (*trigger*) do sistema de reatividade é executado.
 
-<!-- TODO: Future link
-::Callout
-Para saber mais sobre quais são os core modules do Vue e como eles trabalham juntos, leia a [explicação dos 3 core modules do Vue 3](/articles/core-modules-vue-3).
-::
--->
-
 Nesta fase é comparado o Virtual DOM antigo e o novo para analisar o que foi alterado. Com as diferenças das estruturas de Virtual DOM em mãos, as alterações específicas são processadas e atualizadas no DOM.
 
 ## Como criar um Virtual DOM?
