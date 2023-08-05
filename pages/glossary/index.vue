@@ -11,6 +11,6 @@ useHead(head)
 <template>
   <main>
     <h1>Glossário</h1> 
-    <GlossaryItemsList />
+    <GlossaryItemsList searchable />
   </main>
 </template>

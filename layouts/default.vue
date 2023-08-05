@@ -18,19 +18,12 @@
 
 <style lang="scss" scoped>
 .layout-default {
-  $menu-width-desktop: 300px;
-
   &__progress-bar {
     position: fixed;
     top: 0;
     left: 0;
     z-index: 1;
     width: 100%;
-    
-    @media (min-width: 850px) {
-      width: calc(100% - #{$menu-width-desktop});
-      left: $menu-width-desktop;
-    }
   }
 
   &__content {
