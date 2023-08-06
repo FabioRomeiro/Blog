@@ -32,5 +32,14 @@ export default defineNuxtConfig({
     'build:before': () => {
       import('./plugins/fontAwesome/sprite')
     }
+  },
+  vue: {
+    compilerOptions: {
+      isCustomElement: tag => [
+        'book',
+        'shelf',
+        'book-shelf'
+      ].includes(tag)
+    }
   }
 })
