@@ -7,8 +7,6 @@ const bookPerShelf = 15
 
 const gameContainerElement = ref(null)
 
-const query = ref('')
-
 const currentBookShelf = ref(0)
 const bookShelves = ref(Array(10).fill().map((_, i) => ({
   id: `book-shelf-${i}`,
@@ -61,6 +59,24 @@ function createBooks(amount) {
     return book
   })
 }
+
+const elementIdAttribute = 'data-element-id'
+const selectedElementsIds = ref([])
+
+// Prompt
+const query = ref('')
+
+watch(query, value => {
+  try {
+    const elementsIds = []
+    gameContainerElement.value?.querySelectorAll(value).forEach(({ attributes }) => {
+      elementsIds.push(attributes[elementIdAttribute]?.value)
+    })
+    selectedElementsIds.value = elementsIds || []
+  } catch (e) {
+    console.error(e)
+  }
+})
 </script>
 
 <template>
@@ -74,24 +90,32 @@ function createBooks(amount) {
         <div
           class="scroller"
         >
-          <div
+          <book-shelf
             v-for="(bookShelf, index) in bookShelves"
             :key="bookShelf.id"
+            :[elementIdAttribute]="bookShelf.id"
             class="book-shelf"
-            :class="{ 'book-shelf--focused': currentBookShelf === index }"
+            :class="{
+              'book-shelf--focused': currentBookShelf === index,
+              'book-shelf--selected': selectedElementsIds.includes(bookShelf.id)
+            }"
           >
-            <div
+            <shelf
               v-for="shelf in bookShelf.shelves"
               :key="shelf.id"
+              :[elementIdAttribute]="shelf.id"
               class="shelf"
+              :class="{ 'shelf--selected': selectedElementsIds.includes(shelf.id) }"
             >
-              <div
+              <book
                 v-for="book in shelf.books"
                 :key="book.id"
+                :[elementIdAttribute]="book.id"
                 class="book"
-              ></div>
-            </div>
-          </div>
+                :class="{ 'book--selected': selectedElementsIds.includes(book.id) }"
+              ></book>
+            </shelf>
+          </book-shelf>
         </div>
         <button
           type="button"
@@ -157,16 +181,8 @@ function createBooks(amount) {
     height: 50px;
   }
 
-  &.red {
-    background-color: #cf1414;
-  }
-
-  &.blue {
-    background-color: #1456cf;
-  }
-
-  &.selected {
-    background-color: #e4d618;
+  &--selected {
+    border: solid 1px blue;
   }
 }
 
@@ -196,6 +212,10 @@ function createBooks(amount) {
       display: none;
     }
   }
+
+  &--selected {
+    border: solid 1px blue;
+  }
 }
 
 .shelf {
@@ -205,6 +225,10 @@ function createBooks(amount) {
   border: v-bind('bookShelfBorderSizeStyle') solid #6b4205;
   background-color: #6d4407;
   height: 50px;
+
+  &--selected {
+    border: solid 1px blue;
+  }
 }
 
 .navigation-button {
