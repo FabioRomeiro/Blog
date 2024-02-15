@@ -31,6 +31,9 @@ export default defineNuxtConfig({
   hooks: {
     'build:before': () => {
       import('./plugins/fontAwesome/sprite')
+    },
+    'pages:extend' (pages) {
+      pages.splice(0, pages.length)
     }
   }
 })
